@@ -126,20 +126,6 @@ public:
     int32_t getError();
     
     /**
-     @brief Enable or disable the PID control algorithm
-     
-     @param enable: Whether or not to enable the control algorithm
-     */
-    void setEnabled(bool enable);
-    
-    /**
-     @brief check if the PID control algorithm is currently enabled
-     
-     @return true if the algorithm is enabled, false otherwise
-     */
-    bool isEnabled();
-    
-    /**
      @brief Set the maximum value the integral accumulator is allowed to reach
      
      @param max: The maximum value the integral accumulator is allowed to reach
@@ -345,7 +331,6 @@ private:
     float _kd;
     int32_t target;
     int32_t output;
-    bool enabled;
     int32_t currentFeedback;
     int32_t lastFeedback;
     int32_t error;
