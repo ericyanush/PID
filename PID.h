@@ -70,8 +70,15 @@
 class PID
 {
 public:
+    
     /**
      @brief Default constructor
+            Gains are initialized to 1
+     */
+    PID();
+    
+    /**
+     @brief Convienience constructor
      
      @param kp: gain multiplier for the proportional term.
      @param ki: gain multiplier for the integral term.
